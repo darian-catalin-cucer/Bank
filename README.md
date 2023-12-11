@@ -17,11 +17,11 @@ Bank Description
 - Home 
 - Transactions 
 - Send Money
-- Make payment (Upcoming)
+- Make payment
 - Card Info 
-- DarkMode (Upcoming)
-- Multi-language (Upcoming)
-- Read QRCode (Upcoming)
+- DarkMode
+- Multi-language
+- Read QRCode
 
 - ## License
 Project is published under the [Apache-2.0 license](/LICENSE.md).
