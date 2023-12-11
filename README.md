@@ -23,5 +23,5 @@ Bank Description
 - Multi-language
 - Read QRCode
 
-- ## License
+## License
 Project is published under the [Apache-2.0 license](/LICENSE.md).
