@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    This XML defines a simple vector drawable representing a grid pattern.
+    It is used for decorative purposes, such as background or divider lines.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"

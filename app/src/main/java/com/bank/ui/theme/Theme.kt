@@ -37,22 +37,36 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+/**
+ * BankTheme is a custom Compose theme for the banking application, providing color schemes and
+ * dynamic theming based on system settings or Android 12's dynamic color API.
+ *
+ * @param darkTheme Flag indicating whether to use the dark theme, defaults to system setting.
+ * @param dynamicColor Flag indicating whether to use dynamic color theming on Android 12 and above.
+ * @param content The content to be displayed with the specified theme.
+ */
 @Composable
 fun BankTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    // Define color schemes for dark and light themes
     val colorScheme = when {
+        // Use dynamic color scheme if available on Android 12+
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
+        // Use predefined dark color scheme
         darkTheme -> DarkColorScheme
+
+        // Use predefined light color scheme
         else -> LightColorScheme
     }
+
+    // Apply color to the status bar and configure appearance based on dark theme
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
@@ -62,6 +76,7 @@ fun BankTheme(
         }
     }
 
+    // Apply the MaterialTheme with the specified color scheme and typography
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
