@@ -73,16 +73,16 @@ dependencies {
     // Add dependencies for the application.
 
     // AndroidX Core KTX library.
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.13.1")
 
     // AndroidX Lifecycle library.
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
 
     // AndroidX Activity Compose library.
-    implementation("androidx.activity:activity-compose:1.8.0")
+    implementation("androidx.activity:activity-compose:1.9.0")
 
     // Compose BOM (Bill of Materials) for version management.
-    implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation(platform("androidx.compose:compose-bom:2024.05.00"))
 
     // Compose UI libraries.
     implementation("androidx.compose.ui:ui")
@@ -100,7 +100,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // Compose BOM for testing.
-    androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    androidTestImplementation(platform("androidx.compose:compose-bom:2024.05.00"))
 
     // Compose UI testing library.
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
